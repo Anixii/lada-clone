@@ -1,0 +1,9 @@
+.main{ 
+    display: grid;
+    grid-template-columns: 50% 1fr; 
+    column-gap: 24px;
+    @media screen and (max-width:1220px) {
+        row-gap: 48px;
+        grid-template-columns: 100%;
+    }
+}

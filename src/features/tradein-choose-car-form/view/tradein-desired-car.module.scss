@@ -1,0 +1,57 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 46px;
+  .main__title {
+    text-align: center;
+  }
+  .main__form {
+    max-height: 120px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    .form__item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+    }
+    .form__title{ 
+        & > p{ 
+            font-size: 24px;
+            line-height: 28.8px;
+        }
+    }
+    .form__checkboxes {
+      display: flex;
+      column-gap: 16px;
+      row-gap: 10px;
+      flex-wrap: wrap;
+    }
+    .checkboxes__item {
+      display: flex;
+      align-items: center;
+      column-gap: 2px;
+    }
+  }
+  @media screen and (max-width: 1250px) {
+    .main__title {
+      & > p {
+        font-size: 24px;
+      }
+    } 
+  }
+  @media screen and (max-width: 600px) {
+    .main__title {
+      & > p {
+        font-size: 16px;
+      }
+    }
+    .form__checkboxes{ 
+        flex-direction: column;
+    }
+    .main__form{ 
+        max-height: 667px;
+    }
+  }
+}

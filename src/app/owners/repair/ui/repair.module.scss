@@ -1,0 +1,14 @@
+.main{ 
+    padding: 150px 0;
+    .request__form{ 
+        display: flex; 
+        justify-content: center;
+    }
+    .main__title{ 
+        text-align: center;
+    }
+
+    @media screen and (max-width: 1220px) {
+        padding: 110px 0;
+    }
+}

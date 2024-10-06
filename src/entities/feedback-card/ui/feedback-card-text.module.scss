@@ -1,0 +1,9 @@
+.main__btn{ 
+    cursor: pointer;
+    font-weight: 700;
+}
+.main{ 
+    & > p { 
+        line-height: 24px;
+    }
+}

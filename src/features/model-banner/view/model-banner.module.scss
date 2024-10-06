@@ -1,0 +1,48 @@
+
+.banner {
+  padding: 64px 0;
+
+  .bannerBlock {
+    width: 100%;
+    height: 352px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bannerText {
+      width: 1090px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .banner {
+    padding: 32px 0;
+
+    .bannerBlock {
+      height: 294px;
+      width: 960px;
+
+      .bannerText {
+        width: 928px;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .banner {
+    padding: 24px 0;
+
+    .bannerBlock {
+      width: 342px;
+      height: 166px;
+    }
+  }
+}

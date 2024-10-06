@@ -1,0 +1,44 @@
+.main {
+  padding: 100px 0;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    .subtitle {
+      // width: 1119px;
+      letter-spacing: -2%;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+
+  .cards {
+    margin-top: 56px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  // @media(max-width: 1200px) {
+  //   .title {
+  //     .subtitle {
+  //       // width: 960px;
+  //     }
+  //   }
+  // }
+
+  @media(max-width: 640px) {
+    padding: 50px 0;
+
+    // .title {
+    //   .subtitle {
+    //     width: 342px;
+    //   }
+    // }
+  }
+}

@@ -1,0 +1,43 @@
+.main {
+  width: 294px;
+  height: 142px;
+  border-radius: 15px;
+  box-shadow: 1px 6px 7.9px 4px var(--color-gray-six);
+  border: 1px solid;
+  border-image-source: linear-gradient(180deg, #F4F4F4 0%, #EBEBEB 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 12px;
+
+  .icon {
+    background: linear-gradient(bottom to left, #FFC834, #FF5649);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+  }
+
+  @media(max-width: 1200px) {
+    width: 216px;
+    height: 120px;
+  }
+
+  @media(max-width: 640px) {
+    width: 163px;
+    height: 101px;
+
+    box-shadow: 1px 4px 6.9px 2px var(--color-gray-six);
+
+    .icon {
+      width: 70%;
+      height: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

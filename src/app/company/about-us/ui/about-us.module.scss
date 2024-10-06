@@ -1,0 +1,132 @@
+.main { 
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  padding: 182px 0;
+  .cards__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 40px;
+  }
+  .advantages__title {
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
+  }
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feedback__items {
+    margin: 38px 0 52px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  .feedback__link {
+    line-height: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #8a8a8a;
+    font-size: 20px;
+    font-style: normal;
+    font-family: var(--font-pragmatica);
+  }
+  .main__about{ 
+    display: flex;
+    flex-direction: column; 
+    row-gap: 50px;
+  }
+  .main__banner {
+    height: 365px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 7px;
+  }
+  .main__title {
+    margin-top: 56px;
+    margin-left: 20%;
+  }
+  .player {
+    margin: 0 auto;
+    width: calc(772px / 1850px * 100%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+  }
+  .player__link{ 
+    text-decoration: underline;
+    color: var(--color-orange-primary);
+  }
+  .main__car__row{
+    width: 100%;
+  }
+  .car__row{ 
+    display: none;
+  }
+  @media screen and (max-width: 1220px) {
+    padding: 122px 0;
+    .feedback {
+      display: none;
+    }
+    .cards__container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 45px;
+      row-gap: 35px;
+    }
+    .player{ 
+      display: none;
+    }
+    .main__about{ 
+      flex-direction: column-reverse;
+    }
+    .main__banner{
+      height: 247px;
+    }
+    .main__title {
+      margin: 0;
+      text-align: center;
+    }
+    .car__row{  
+      margin-bottom: 24px !important;
+      margin: 0 auto;
+      width: calc(668px / 960px * 100%);
+      display: block;
+    }
+  } 
+
+  @media screen and (max-width: 980px) {
+    .cards__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    padding: 95px 0;
+    row-gap: 30px;
+    .player,.main__top_content{ 
+      display: flex;
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+    .car__row{ 
+      display: none;
+    }
+    .cards__container {
+      row-gap: 32px;
+      grid-template-columns: 1fr;
+    }
+    .main__about{ 
+      row-gap: 27px;
+    }
+    .main__banner{
+      height: 181px;
+    }
+    .main__title{ 
+      text-align: start;
+    }
+  }
+}

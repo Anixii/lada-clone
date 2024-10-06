@@ -1,0 +1,43 @@
+.modelRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .modelRowInner {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    column-gap: 101px;
+    margin: 40px 0 0;
+    border-bottom: 1px solid var(--color-gray-six);
+  }
+
+  .tabInner {
+    // width: 1400px;
+    width: 100%;
+    padding: 40px 0;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 32px;
+    row-gap: 32px;
+
+    flex-wrap: wrap;
+  }
+
+}
+
+.accordionContent {
+  border-bottom: 1px solid #ccc;
+  background: var(--color-white);
+  border-top: none;
+}
+
+.accordionItem {
+  width: 100%;
+}
+
+.hoverSubtitle {
+  cursor: pointer;
+}

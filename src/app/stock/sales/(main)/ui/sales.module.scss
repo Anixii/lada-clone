@@ -1,0 +1,27 @@
+.main{ 
+    margin: 45px 0 115px 0;
+}
+.sales__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.main__title {
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 64px;
+}
+@media screen and (max-width: 1220px) {
+  .sales__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .sales__list {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .main__title {
+    text-align: center;
+  }
+}

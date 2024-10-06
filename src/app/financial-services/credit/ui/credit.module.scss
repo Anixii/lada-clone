@@ -1,0 +1,32 @@
+.main {
+    .main__title{ 
+        text-align: center;
+        margin: 30px 0;
+    } 
+    .main__subtitle{   
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .main__form{ 
+      padding: 25px 0 55px;
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }
+  @media screen and (max-width: 1220px) {
+    .advantages__title {
+      font-size: 32px;
+      text-align: center;
+      line-height: 38px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .advantages__title {
+      font-size: 24px;
+      text-align: start;
+      line-height: 28px;
+    }
+  }
+}

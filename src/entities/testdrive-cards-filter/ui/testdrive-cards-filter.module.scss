@@ -1,0 +1,78 @@
+.main{ 
+    display: flex; 
+    flex-direction: column;
+    row-gap: 50px;
+    .main__filter{ 
+        display: flex; 
+        flex-direction: column;
+        row-gap: 8px; 
+    } 
+    .main__select{ 
+        width: 45%; 
+        height: 48px;
+    }
+    .main__cards{ 
+        display: grid; 
+        grid-template-columns: repeat(3, calc(240px / 832px * 100% ) );
+        justify-content: space-between;
+        gap: 56px;
+    } 
+    .card__item{  
+        position: relative;
+        display: flex; 
+        flex-direction: column; 
+        row-gap: 24px; 
+        align-items: center;
+        background-color: white;
+        border-radius: 15px; 
+        padding: 32px 16px;
+    }
+    .card__image{ 
+        width: 192px;
+        height: 121px; 
+        object-fit: contain;
+        object-position: center;
+    }
+    .card__checkbox{  
+        position: absolute; 
+        top: 8px;
+        right: 8px; 
+    } 
+    .main__btn{ 
+        padding: 22px; 
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
+        background-color: #E44A00;
+        border-radius:40px; 
+        margin: 0 auto;
+        width: 60%;
+    }
+    .card__title{ 
+        & > p{ 
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        .main__cards{ 
+            grid-template-columns: repeat(2, 1fr );
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .main__select{ 
+            width: 100%; 
+        }
+        .main__cards{ 
+            grid-template-columns: 1fr;
+        }
+        .main__btn{ 
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 290px) {
+        .card__image{
+            width: 100%;
+        }
+    }
+}

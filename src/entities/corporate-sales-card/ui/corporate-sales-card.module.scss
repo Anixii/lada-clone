@@ -1,0 +1,20 @@
+.cards__item {
+  display: flex;
+  width: calc(214px / 1408px * 100%);
+  align-items: center;
+  row-gap: 8px;
+  flex-direction: column;
+  .cards__image {
+    width: 100%;
+    height: auto;
+  }
+  .card__title {
+    text-align: center;
+  }
+  @media screen and (max-width: 650px) {
+    width: calc(163px / 364px * 100%);
+    .card__title {
+      text-align: start;
+    }
+  }
+}

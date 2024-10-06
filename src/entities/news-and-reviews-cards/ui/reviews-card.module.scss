@@ -1,0 +1,58 @@
+.main {
+  max-width: 533px;
+  height: 398px;
+
+  border-radius: 20px;
+  background: var(--color-gray-seven);
+  padding: 40px 26px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 65px;
+
+  .text {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    max-width: 453px;
+
+    .quotes {
+      position: absolute;
+      z-index: -1;
+      right: -38px;
+      top: -28px;
+    }
+
+    .date {
+      width: fit-content;
+      padding: 8px 16px;
+      border-radius: 40px;
+
+      margin-bottom: 8px;
+      background-color: var(--color-gray-five);
+    }
+  }
+
+  @media (max-width: 640px) {
+    max-width: 343px;
+    min-height: 313px;
+
+    .text {
+      max-width: 241px;
+
+      .quotes {
+        width: 93px;
+        height: 71px;
+  
+        right: -28px;
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.breadcrumb__wrapper {
+  width: 100%; 
+  position: relative;
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+    position: absolute;
+    z-index: 99;
+    .breadcrumb__item {
+      display: flex;
+      align-items: center;
+      column-gap: 18px;
+    }
+    .breadcrumb__image {
+      height: 12px;
+      width: auto;
+      transform: scaleX(-1);
+    }
+    .dark {
+      color: #1c1a1a;
+    }
+    .light {
+      color: white;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}

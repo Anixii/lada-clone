@@ -1,0 +1,24 @@
+.main{ 
+    padding: 64px 0;
+    margin: 0 auto;
+    width: calc(1217px / 1408px * 100%); 
+    display: flex; 
+    flex-direction: column; 
+    row-gap: 34px;
+    .main__text{ 
+        width: calc(934px / 1208px * 100%); 
+        display: flex; 
+        flex-direction: column;
+        row-gap: 24px;
+        .main__subtitle{ 
+            line-height: 28.8px;
+        }
+    } 
+    .main__cards{ 
+        display: flex; 
+        justify-content: space-between; 
+    }
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+}

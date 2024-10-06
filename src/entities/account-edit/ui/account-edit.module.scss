@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  .main__form {
+    display: flex;
+    flex-direction: column; 
+    row-gap:24px
+  }
+  .form__item{ 
+    display: flex; 
+    flex-direction: column; 
+    row-gap: 8px;
+  } 
+  .form__item__input{ 
+    border: 1px solid #D1D1D1; 
+    background-color: white;
+    border-radius: 7px;
+    padding: 12px 10px;
+  }
+  .form__change{ 
+    cursor: pointer;
+  }
+  @media screen and (max-width: 1200px) {
+    .main__title {
+      & > h2 {
+        font-size: 48px;
+        line-height: 57.6px;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .main__title {
+      & > h2 {
+        font-size: 32px;
+        line-height: 38.4px;
+      }
+    }
+  }
+}

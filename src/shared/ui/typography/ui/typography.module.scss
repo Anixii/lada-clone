@@ -1,0 +1,179 @@
+.bold {
+  font-weight: 700;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.h1 {
+  font-size: 56px;
+  font-style: normal;
+  font-family: var(--font-pragmatica);
+}
+
+.h2 {
+  font-size: 48px;
+  font-style: normal;
+  font-family: var(--font-pragmatica);
+  line-height: 57px;
+}
+
+.h3 {
+  font-size: 40px;
+  font-style: normal;
+  font-family: var(--font-pragmatica);
+}
+
+.h4 {
+  font-size: 32px;
+  font-style: normal;
+  font-family: var(--font-pragmatica);
+  line-height: auto;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-style: normal;
+  font-family: var(--font-pragmatica);
+}
+
+.subtitleSecond {
+  font-size: 24px;
+  font-style: normal;
+  font-family: var(--font-pragmatica);
+  line-height: 130%;
+}
+
+.button {
+  font-size: 16px;
+  font-family: var(--font-pragmatica);
+}
+
+.text {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: var(--font-pragmatica);
+}
+
+.textBody {
+  font-size: 16px;
+  font-family: var(--font-pragmatica);
+  line-height: 150%;
+}
+
+.textSmall {
+  font-size: 14px;
+  line-height: 150%;
+  font-family: var(--font-pragmatica);
+}
+
+.textExtraSmall {
+  font-size: 10px;
+  line-height: 12px;
+  font-family: var(--font-pragmatica);
+}
+
+.textHyperSmall {
+  font-size: 8px;
+  line-height: 12px;
+  font-family: var(--font-pragmatica);
+}
+
+.titleText{ 
+  font-size: 48px;
+  font-style: normal;
+  font-family: var(--font-pragmatica);
+  line-height: 57px;
+}
+
+.black {
+  color: var(--color-black);
+}
+
+.gray {
+  color: var(--color-gray);
+}
+
+.white {
+  color: var(--color-white);
+}
+
+.orange {
+  color: var(--color-secondary);
+}
+
+.footer {
+  color: var(--color-dark-gray);
+}
+
+.red { 
+  color: var(--color-red-error);
+}
+
+
+@media (max-width: 1220px) {
+  .h1 {
+    font-size: 70px;
+    line-height: 77px;
+  }
+
+  .h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .h4 {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+
+  .titleText{ 
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .h2 {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  .h3 {
+    font-size: 16px;
+    line-height: 19.2px; 
+  }
+
+  .h4 {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+
+  .subtitleSecond {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+  .titleText{ 
+    font-size: 32px;
+    line-height: 38px;
+  }
+}

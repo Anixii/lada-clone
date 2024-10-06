@@ -1,0 +1,65 @@
+.accordion {
+  padding: 14.5px 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+@keyframes openAccordion {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes closeAccordion {
+  from {
+    height: 100%;
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .iconOpen {
+      transform: rotate(180deg);
+    }
+    .iconOpen {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.close {
+  display: none;
+}
+
+.open {
+  display: block;
+  animation: openAccordion 0.3s ease forwards;
+}
+
+.closing {
+  display: block;
+  animation: closeAccordion 0.1s ease forwards;
+}

@@ -1,0 +1,61 @@
+.modelRowMain {
+  height: 894px;
+  background: url("../../shared/assets/images/lada-vesta-bg.png") center
+    no-repeat;
+  background-size: cover;
+  padding-top: 152px;
+
+  .modelRowText {
+    h4 {
+      margin: 24px 0 8px 0;
+    }
+
+    h2 {
+      width: 372px;
+    }
+  }
+
+  .modelRowButtons {
+    display: flex;
+    flex-direction: column;
+    max-width: 243px;
+    justify-content: center;
+    row-gap: 16px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .modelRowMain {
+    height: 476px;
+    padding-top: 104px;
+
+    .modelRowText {
+      h4 {
+        margin: 16px 0 8px 0;
+      }
+    }
+
+    .modelRowButtons {
+       max-width: 312px;
+       margin-top: 24px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .modelRowMain {
+    padding-top: 189px;
+    background-position: 70%;
+
+    .modelRowButtons {
+      max-width: none;
+    }
+
+    .modelRowText {
+      h2 {
+        width: 284px;
+      }
+    }
+  }
+}

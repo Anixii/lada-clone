@@ -1,0 +1,38 @@
+export interface ICar {
+  id: number,
+  name: string,
+  vin: string,
+  full_price: number,
+  monthly_price: number,
+  image: null | string,
+  image_path: string,
+  image_detail: null | string,
+  image_detail_path: string,
+  car_model: number,
+  transmission: number,
+  car_body: number,
+  car_drive: number,
+  car_volume: number,
+  car_color: number,
+  vehicle_configuration: number
+}
+
+export interface IUsedCar {
+  id: number,
+  name: string,
+  full_price: number,
+  monthly_price: number,
+  run: number,
+  volume_c: string,
+  image: string,
+  image_path: string,
+  mark: number,
+  year_issue: number,
+  equipment: number,
+  transmission: number,
+  engine: number,
+  body: number,
+  drive: number,
+  volume_l: number,
+  color: number,
+}

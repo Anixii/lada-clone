@@ -1,0 +1,18 @@
+.main__title {
+  padding: 111px 0 105px;
+  text-align: center;
+  @media screen and (max-width: 1250px) {
+    padding: 57px 48px;
+    & > h2 {
+      line-height: 48px;
+      font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    padding: 36px 40px;
+    & > h2 {
+      line-height: 38.4px;
+      font-size: 32px;
+    }
+  }
+}

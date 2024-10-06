@@ -1,0 +1,68 @@
+@import 'mixins';
+
+.card {
+  // min-width: 851px;
+  height: 405px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 0 0 48px 40px; 
+  display: flex; 
+  align-items: flex-end;
+
+  .cardContent {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  button {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .card {
+    min-width: 468px;
+    height: 237px;
+    padding: 16px;
+
+    .cardContent {
+      max-width: 468px;
+      gap: 8px;
+      max-width: 400px;
+    }
+
+    button {
+      width: 132px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    min-width: 282px;
+    height: 154px;
+    padding: 16px 8px;
+
+
+    .cardContent {
+      P {
+        white-space: nowrap;
+      }
+      p:not(:nth-child(2)) {
+        display: none;
+      }
+
+      button {
+        width: 100%;
+        p { 
+          display: block !important;
+        }
+      }
+    }
+  }
+}

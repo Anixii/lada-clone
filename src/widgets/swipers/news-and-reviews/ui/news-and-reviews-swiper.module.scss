@@ -1,0 +1,81 @@
+.main {
+  padding: 100px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 88px;
+  column-gap: 24px;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 32px;
+  }
+  .swiper {
+    width: 851px;
+    min-height: 398px;
+
+    position: relative;
+  }
+
+  .reviewsSwiper {
+    width: 533px;
+    min-height: 398px;
+
+    position: relative;
+  }
+
+  .navButtons {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 10;
+
+    display: flex;
+    column-gap: 16px;
+  }
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    .news,.reviews {
+      width: 100%;
+    }
+  }
+  @media (max-width: 960px) {
+    .swiper {
+      width: 100%;
+    } 
+  }
+  @media (max-width: 640px) {
+    padding: 50px 0 100px;
+
+    flex-direction: column;
+
+    row-gap: 123px;
+
+    .swiper {
+      max-width: 343px;
+      min-height: 313px;
+
+      position: relative;
+    }
+
+    .reviewsSwiper {
+      max-width: 343px;
+      min-height: 313px;
+
+      position: relative;
+    }
+
+    .navButtons {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  @media (max-width: 365px){ 
+    .reviewsSwiper{ 
+      width: 100%;
+    } 
+  }
+}

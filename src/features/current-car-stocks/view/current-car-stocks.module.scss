@@ -1,0 +1,31 @@
+.main {
+  padding: 48px 0 58px 0;
+  display: flex; 
+  flex-direction: column; 
+  row-gap: 16px;
+  .main__title {
+    font-size: 24px;
+    line-height: 28px;
+  } 
+  .main__items { 
+    display: flex; 
+    row-gap: 16px;
+    column-gap: 24px; 
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .stock__item{ 
+    padding: 8px 16px;
+    background-color: var(--color-orange-primary);
+    border-radius: 10px;
+  }
+  @media screen and (max-width: 1220px) {
+  }
+  @media screen and (max-width: 600px) {
+    row-gap: 24px;
+    .main__title {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.inputs {
+  display: flex;
+  margin-top: 16px;
+  column-gap: 16px;
+
+  .input {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+
+    input {
+      padding: 10.5px 16px;
+      width: 124px;
+      border-radius: 5px;
+
+      font-size: 16px;
+
+      border: 1px solid var(--color-gray-six);
+    }
+  }
+}

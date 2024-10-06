@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  padding: 40px 0;
+}
+
+.main__cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  @media screen and (max-width: 650px) {
+    column-gap: 16px;
+    row-gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

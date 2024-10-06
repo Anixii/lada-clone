@@ -1,0 +1,11 @@
+.main__pagination{ 
+    & > li { 
+        border: 1px solid var(--color-gray-five) !important;
+    } 
+    & > li[class~=ant-pagination-item-active]{ 
+        background-color: #E44A00;
+        & > a { 
+            color: white;
+        }
+    }
+}

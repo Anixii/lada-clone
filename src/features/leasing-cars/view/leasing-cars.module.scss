@@ -1,0 +1,158 @@
+.main {
+    padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 56px;
+  .main__cars,
+  .main__leasing__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 23px;
+    row-gap: 16px;
+  }
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  .main__cars__item,
+  .leasing__card__lada {
+    position: relative;
+    display: flex;
+    background-color: var(--color-gray-eight);
+    border-radius: 20px;
+  }
+  .leasing__card__lada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    padding: 24px;
+  }
+  .card__lada__title,
+  .leasing__partners__title {
+    line-height: 31.2px;
+    font-size: 24px;
+  }
+  .card__lada__btn {
+    width: calc(537px / 692px * 100%);
+    background-color: #e44a00;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18.5px;
+    color: white;
+  }
+  .cars__item__image {
+    height: auto;
+    width: calc(367px / 692px * 100%);
+    object-position: center;
+    object-fit: cover;
+  }
+  .cars__item__title {
+    top: calc(32px / 231px * 100%);
+    right: calc(96px / 692px * 100%);
+    position: absolute;
+  }
+  .leasing__partners {
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    column-gap: 32px;
+    align-items: center;
+    padding: 24px;
+  }
+  .leasing__partners__head {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+  }
+  .leasing__partners__subtitle {
+    text-align: center;
+    line-height: 24px;
+  }
+  .leasing__partners__btn {
+    border: 1px solid #e44a00;
+    color: #e44a00;
+    border-radius: 30px;
+    padding: 22.5px;
+    width: calc(342px / 613px * 100%);
+    font-weight: 700;
+    background-color: transparent;
+  }
+  .leasing__partners__logo {
+    width: calc(294px / 613px * 100%);
+    object-fit: contain;
+    object-position: center;
+  }
+  @media screen and (max-width: 1220px) {
+    .cars__item__title {
+      top: calc(32px / 191px * 100%);
+      right: calc(48px / 468px * 100%);
+      font-size: 32px;
+      line-height: 38px;
+    }
+    .cars__item__image {
+      width: calc(304px / 468px * 100%);
+    }
+    .main__content {
+      row-gap: 24px;
+    }
+    .card__lada__btn {
+      width: 100%;
+    }
+    .leasing__partners__head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      column-gap: 32px;
+    }
+    .leasing__partners__btn {
+      width: calc(342px / 470px * 100%);
+    }
+    .leasing__partners__logo {
+        width: 100%
+      }
+  }
+  @media screen and (max-width: 600px) {
+    .main__cars,
+    .main__leasing__cards {
+      grid-template-columns: 1fr;
+    }
+    .main__leasing__cards {
+      row-gap: 24px;
+    }
+    .leasing__card__lada,
+    .leasing__partners {
+      padding: 24px 8px;
+    }
+    .leasing__partners{
+        row-gap: 32px;
+    }
+    .cars__item__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .cars__item__image {
+      width: calc(186px / 342px * 100%);
+    }
+    .main__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .main__content {
+      row-gap: 16px;
+    }
+    .card__lada__title {
+      line-height: 18px;
+      font-size: 16px;
+    }
+    .card__lada__btn {
+      padding: 14.5px;
+    }
+    .leasing__partners__btn {
+      width: 100%;
+    }
+  }
+}

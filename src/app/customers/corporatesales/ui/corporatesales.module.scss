@@ -1,0 +1,25 @@
+// .breadcrumb__container{ 
+//   position: absolute; 
+//   top: 100px;
+// }
+.main__text{ 
+  margin: 0 auto;
+}
+.main__title{   
+  margin: 0 auto;
+  width: calc(1217px / 1408px * 100%);
+  padding: 64px 0;
+  font-style: normal;
+  font-family: var(--font-pragmatica);
+  font-size: 32px;
+  text-align: center; 
+  line-height: 38.4px; 
+  @media screen and (max-width:1200px) {
+    width: 100%;
+  }
+  @media screen and (max-width:600px) {
+    padding: 44px 0;
+    font-size: 16px;
+    line-height: 20.4px;
+  }
+}

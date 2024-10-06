@@ -1,0 +1,163 @@
+.flexed {
+  display: flex;
+  justify-content: center;
+  column-gap: 64px;
+  padding: 40px 0;
+
+  > a {
+    text-decoration: none;
+    color: var(--color-black);
+  }
+}
+
+.hoverSubtitle {
+  cursor: pointer;
+}
+
+.header {
+  position: absolute;
+  // top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  &.black__variant {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &:hover,
+  &.white__variant {
+    background-color: var(--color-white);
+
+    .li {
+      p {
+        color: var(--color-black) !important;
+
+        &:hover {
+          color: var(--color-primary) !important;
+          text-decoration: 3px underline var(--color-primary);
+          text-underline-offset: 8px;
+        }
+      }
+    }
+    .lk__image {
+      filter: brightness(0.5) contrast(1.2);
+    }
+    .header__logo {
+      // filter: brightness(0.7) contrast(1.2) sepia(0.3) hue-rotate(180deg);
+      filter: brightness(0.45) contrast(1.2);
+    }
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 24px 0 16px;
+
+    .f {
+      width: 206px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .s {
+      display: flex;
+      column-gap: 48px;
+
+      .li {
+        list-style: none;
+        cursor: pointer;
+      }
+    }
+
+    .t {
+      .lkLogo {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+
+      .burgerInner {
+        background-color: var(--color-white);
+        height: 100%;
+        width: 100%;
+      }
+    }
+    // @media (max-width: 1200px) {
+    //   padding-left: 34px;
+    //   padding-right: 34px;
+    // }
+    // @media (max-width: 640px) {
+    //   padding-left: 24px;
+    //   padding-right: 24px;
+    // }
+  }
+
+  .accordionContent {
+    border-bottom: 1px solid #ccc;
+    background: var(--color-white);
+    border-top: none;
+  }
+
+  .accordionItem {
+    width: 100%;
+    padding: 26.5px 0;
+    text-align: center;
+    background: var(--color-white);
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .accordionFlexed {
+    display: flex;
+    flex-direction: column;
+
+    .accordionSubtitle {
+      width: 100%;
+      padding: 26.5px 0;
+      text-align: center;
+
+      border-bottom: 1px solid var(--color-gray-five);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &:hover {
+      background-color: transparent;
+    }
+
+    .main {
+      .f {
+        width: 123px;
+        height: 24px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .s {
+        display: none;
+      }
+
+      .t {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 32px;
+
+        .lkLogo {
+          width: 32px;
+          height: 32px;
+
+          .lk__image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+

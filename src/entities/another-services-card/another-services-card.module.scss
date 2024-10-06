@@ -1,0 +1,58 @@
+.card__item {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 31px;
+  width: calc(294px / 1407px * 100%); 
+  border-radius: 15px;  
+  justify-content: space-between;
+  background-color: var(--color-gray-eight);
+  min-height: 252px; 
+  background-repeat: no-repeat; 
+  background-position: 92% center;
+
+  &.credit{ 
+    background-image: url('../../shared/assets/icons/credit.svg'); 
+  }
+  &.leasing{ 
+    background-image: url('../../shared/assets/icons/insurance.svg'); 
+  }
+  &.insurance{ 
+    background-image: url('../../shared/assets/icons/insurance.svg'); 
+  }
+  .card__text{ 
+    display: flex; 
+    flex-direction: column; 
+    row-gap: 24px; 
+    .card__subtitle{ 
+        & > p { 
+            line-height: 24px;
+        }
+    }
+    .card__title{ 
+        & > p { 
+            font-size: 24px;
+            line-height: 28.8px;
+        }
+    } 
+  }
+  .card__btn{  
+    color: #E44A00; 
+    background-color: transparent;
+    font-weight: 700;
+    border-radius: 30px; 
+    border: 1px solid #E44A00;
+    width: 100%; 
+    padding: 14.5px 8px; 
+    transition: all ease-in 0.1s;
+    &:hover { 
+        background-color: #efeeee;
+    }
+    } 
+    @media screen and (max-width:1200px) {
+        width: calc(294px / 960px * 100%); 
+    }
+    @media screen and (max-width:650px) {
+        width: 100%; 
+    }
+}

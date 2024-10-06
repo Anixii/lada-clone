@@ -1,0 +1,42 @@
+.main{ 
+    height: 894px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../shared/assets/images/stock-service-banner.png);
+    position: relative;
+    .main__text{ 
+        position: absolute;
+        bottom: 5%;
+        display: flex; 
+        flex-direction: column; 
+        row-gap: 16px;
+    }
+    .main__title, .main__subtitle{ 
+        text-align: center;
+    } 
+    @media screen and (max-width: 1220px) {
+        height: 477px;
+        .main__title{ 
+            font-size: 40px;
+            line-height: 48px;
+        }
+        .main__subtitle{ 
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        height: 298px;
+        .main__title{ 
+            text-align: start;
+            font-size: 24px;
+            line-height: 28px;
+        }
+        .main__subtitle{ 
+            text-align: start;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

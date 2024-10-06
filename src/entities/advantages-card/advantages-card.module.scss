@@ -1,0 +1,21 @@
+.card__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  .card__image {
+    width: 72px;
+    height: auto;
+  }
+  .card__subtitle {
+    & > p {
+      line-height: 24px;
+    }
+  }
+  @media screen and (max-width: 650px) {
+
+    .card__image {
+      width: 48px;
+      height: auto;
+    }
+  }
+}

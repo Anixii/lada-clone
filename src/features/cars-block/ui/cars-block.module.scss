@@ -1,0 +1,34 @@
+.main {
+  margin-left: 15px;
+
+  .carsBlock {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 4px;
+    row-gap: 8px;
+  }
+  .info {
+    margin-top: 24px;
+    width: 100%;
+    .moreButton {
+      width: 100%;
+      margin-bottom: 24px;
+  
+      button {
+        width: 100%;
+      }
+    }
+  } 
+  @media screen and (max-width:1220px) {
+    .carsBlock {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media screen and (max-width:900px) { 
+    margin-left: 0;
+    .carsBlock {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}

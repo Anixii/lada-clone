@@ -1,0 +1,22 @@
+.main{ 
+    padding: 50px 0;
+    display: flex; 
+    flex-direction: column; 
+    row-gap: 24px;
+    .main__title{ 
+        & > p { 
+            font-size: 24px;
+            line-height: 28.8px;
+        }
+    } 
+    .main__cards{ 
+        display: flex; 
+        column-gap: 24px; 
+        row-gap: 16px;
+    } 
+    @media screen and (max-width:650px) {
+        .main__cards{ 
+            flex-direction: column;
+        }   
+    }
+}

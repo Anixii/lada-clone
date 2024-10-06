@@ -1,0 +1,79 @@
+.carCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px;
+
+  .banner {
+    background-color: var(--color-primary);
+    border-radius: 32px;
+    padding: 8px 38px;
+  }
+
+  .descriptions {
+    width: 100%;
+    padding: 0 4px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  .car_image {
+    width: 100%;
+    height: 197px;
+    background-color: var(--color-primary);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 16px 0;
+    & img { 
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  .desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    .color {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-right: 4px;
+    }
+
+    & p {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .price {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  .moreButton {
+    opacity: 0;
+    margin-top: 16px;
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-gray-five);
+
+    .moreButton {
+      opacity: 1;
+    }
+  }
+}

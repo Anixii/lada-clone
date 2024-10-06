@@ -1,0 +1,18 @@
+.main {
+    width: 100%;
+  .main__btn {
+    width: 100%;
+    color: #e44a00;
+    border: 1px solid #e44a00;
+    border-radius: 10px;
+    padding: 14.5px;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: white;
+    transition: all ease-in 0.2s;
+    &:hover {
+      background-color: #e44a00;
+      color: white;
+    }
+  }
+}

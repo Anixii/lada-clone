@@ -1,0 +1,50 @@
+.card__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  .card__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  .card__mail,
+  .card__phone {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+  }
+  .card__mail {
+    & > p {
+      text-decoration: underline;
+    }
+  }
+  .card__text_jobtitle{ 
+    & > p { 
+      min-height: 40px;
+    }
+  }
+
+  .card__image {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    min-height: 275px;
+    object-fit: cover;
+    object-position: center;
+  }
+  @media screen and (max-width: 1220px) {
+
+  }
+  @media screen and (max-width: 600px) {
+    .card__image {
+      min-height: 205px;
+    }
+    .card__mail,
+    .card__phone {
+      column-gap: 8px;
+    }
+    .card__text_fullname{ 
+      min-height: 58px;
+    }
+  }
+}

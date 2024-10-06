@@ -1,0 +1,143 @@
+.main {
+  background-color: var(--color-gray-seven);
+  padding: 40px 0 20px;
+
+  .f {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+
+    .lists {
+      display: flex; 
+      flex-wrap: wrap;
+      column-gap: 31px;
+
+      .ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        max-width: 160px;
+      }
+
+      .title {
+        margin-bottom: 16px;
+        max-width: 132px; 
+      }
+
+      .li {
+        list-style: none;
+      }
+    }
+  }
+
+  .s {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+
+    .logos {
+      display: flex;
+      column-gap: 24px;
+
+      .social_logo {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .t {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    
+    .tl {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    .tr {
+      max-width: 851px;
+    }
+  }
+
+  .hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-gray-six);
+  }
+
+  .accordionContent {
+    background-color: transparent;
+  }
+
+  .accordionInner {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .accordionItem {
+    text-align: left;
+    width: 100%;
+    background-color: transparent;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--color-gray-five);
+  }
+
+  @media(max-width: 1200px) {
+    .f {
+      flex-direction: column;
+      row-gap: 24px;
+
+      .lists {
+        margin: 0 auto;
+        column-gap: 16px;
+
+        .title {
+          margin-bottom: 8px;
+        }
+
+        .ul {
+          max-width: 132px;
+        }
+      }
+    }
+
+    .s {
+      padding: 16px 0;
+    }
+
+    .t {
+      .tr {
+        width: 480px;
+      }
+    }
+  }
+
+  @media (max-width: 640px){
+    .f {
+      padding-bottom: 0;
+    }
+
+    .s {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    .t {
+      flex-direction: column;
+
+      .tl {
+        margin-bottom: 8px;
+        row-gap: 8px;
+      }
+
+      .tr {
+        width: 100%;
+      }
+    }
+  }
+}

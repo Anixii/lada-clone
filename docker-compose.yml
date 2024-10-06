@@ -1,0 +1,26 @@
+
+services:
+  front-lada:
+    image: ${CI_REGISTRY}:${BRANCH_NAME}
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BASE_URL=${BASE_URL}
+    container_name: front-lada
+    networks:
+      backend:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.front-lada.rule=Host(`${DNS_NAME}`)
+      - traefik.http.services.front-lada.loadbalancer.server.port=3000
+      - traefik.http.middlewares.mywwwredirect.redirectregex.regex=^https://www\.(.*)
+      - traefik.http.middlewares.mywwwredirect.redirectregex.replacement=https://$${1}
+      - traefik.http.routers.front-lada.middlewares=mywwwredirect
+
+networks:
+  backend:
+    name: backend
+    driver: bridge
+    external: true

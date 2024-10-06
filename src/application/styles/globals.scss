@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  font-size: 14px;
+  line-height: 1;
+  text-size-adjust: 100%;
+  width: 100%;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.under_swiper_card_item {
+  min-height: 305px !important; 
+  & img { 
+    height: 188px !important;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+  @media screen and (max-width: 600px) {
+    min-height: 274px !important;
+    & img { 
+      height: 123px !important;
+    }
+  }
+
+}
+.container {
+  position: relative;
+  max-width: 1408px;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+
+  @media (max-width: 1200px) {
+    max-width: 960px;
+    padding-left: 34px !important;
+    padding-right: 34px !important;
+  }
+
+  @media (max-width: 640px) {
+    max-width: 100%;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}

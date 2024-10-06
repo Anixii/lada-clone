@@ -1,0 +1,123 @@
+.interiorBlock {
+    padding: 200px 0 68px 0;
+
+    .interiorHeadText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 64px;
+    }
+
+    .interiorFootText {
+        text-align: center;
+        margin-top: 64px;
+    }
+
+    .interiorSlider {
+        position: relative;
+        margin-top: 32px;
+        .interiorSlide {
+            max-width: 453px;
+
+            .interiorImage {
+                width: 453px;
+                height: 347px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                    object-fit: cover;
+                }
+            }
+
+            p {
+                margin-top: 24px;
+            }
+        }
+
+        .nextButton {
+            position: absolute;
+            right: -24px;
+            top: 150px;
+            z-index: 2;
+        }
+
+        .prevButton {
+           position: absolute;
+           z-index: 2;
+           left: -24px;
+           top: 150px;
+        }
+    }
+}
+
+@media (max-width: 1220px) {
+    .interiorBlock {
+        padding: 350px 0 60px;
+        .interiorHeadText {
+            row-gap: 32px;
+        }
+        
+        .interiorSlider {
+            .interiorSlide {
+                max-width: 301px;
+                .interiorImage {
+                    width: 301px;
+                    height: 231px;
+
+                }
+
+                p {
+                    margin-top: 16px;
+                }
+            }
+
+            .nextButton {
+                top: 90px;
+            }
+    
+            .prevButton {
+                top: 90px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .interiorBlock {
+        padding: 220px 0 30px;
+        .interiorHeadText {
+            row-gap: 0;
+        }
+        
+        .interiorSlider {
+            .interiorSlide {
+                max-width: 223px;
+                .interiorImage {
+                    width: 223px;
+                    height: 171px;
+                }
+
+                p {
+                }
+            }
+
+            .nextButton, .prevButton {
+                display: none;
+            }
+
+        }
+
+        .mobileButtons {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+            justify-content: end;
+        }
+
+        .interiorFootText {
+            margin-top: 24px;
+        }
+    }
+}
