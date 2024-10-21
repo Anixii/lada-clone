@@ -5,7 +5,7 @@ import CarCard from '@/entities/car-card/ui/car-card';
 import { PATHS } from '@/shared/lib/variables/variables';
 import AppButton from '@/shared/ui/button/ui/button';
 import { Typography } from '@/shared/ui/typography';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import React, { FC } from 'react';
 
 
@@ -18,17 +18,10 @@ const INFO = 'Расчет ежемесячного платежа, сформи
 
 const CarsBlock: FC<ICarsBlock> = ({ cars }) => {
   const pathname = usePathname();
-  const router = useRouter();
   const isCarAvailablePage = pathname.includes(PATHS.CAR_AVAILABLE);
-  const onHandleClick = () => {
-    if (isCarAvailablePage) {
-      router.push('/cars/car-available/1');
-    } else {
-      router.push('/cars/used-car/1');
-    }
-  };
+
   return (
-    <div onClick={onHandleClick} className={styles.main}>
+    <div className={styles.main}>
       <div className={styles.carsBlock}>
         {cars?.map((car, i) => (
           <CarCard key={i} car={car} used={!isCarAvailablePage}/>

@@ -1,53 +1,39 @@
 import styles from './employees-block.module.scss';
-import { employeesVariables } from '@/shared/lib/variables/employees-variables';
 import { Typography } from '@/shared/ui/typography';
 import { EmployeeCard } from '@/features/employee-card';
+import { OfficersApiData } from '@/shared/api/officers/officers-type';
 
 
-const EmployeesBlock = () => {
+interface IEmployeesBlock {
+  employees: Array<OfficersApiData>
+}
+const EmployeesBlock = ({ employees }:IEmployeesBlock) => {
   return (
     <div className={`${styles.main} container`}>
       <Typography variant="titleText" weight="regular">
         Сотрудники
       </Typography>
-      <div className={styles.main__content}>
-        <div className={styles.main__subtitle}>
-          <Typography variant="subtitle" color="orange" weight="regular">
-            Отдел продаж
-          </Typography>
+      {employees.map((item, index) => <>
+        <div key={index} className={styles.main__content}>
+          <div className={styles.main__subtitle}>
+            <Typography variant="subtitle" color="orange" weight="regular">
+              {item.name}
+            </Typography>
+          </div>
+          <div className={styles.main__cards}>
+            {item.officers.map((item, i) => (
+              <EmployeeCard
+                key={i}
+                fullname={`${item.first_name} ${item.middle_name} ${item.last_name}`}
+                image={item.image}
+                jobTitle={item.position}
+                mail={item.link}
+                phoneNumber={item.phone_number}
+              />
+            ))}
+          </div>
         </div>
-        <div className={styles.main__cards}>
-          {employeesVariables.salesDepartment.map((item, index) => (
-            <EmployeeCard
-              key={index}
-              fullname={item.fullname}
-              image={item.image}
-              jobTitle={item.jobTitle}
-              mail={item.mail}
-              phoneNumber={item.phoneNumber}
-            />
-          ))}
-        </div>
-      </div>
-      <div className={styles.main__content}>
-        <div className={styles.main__subtitle}>
-          <Typography variant="subtitle" color="orange" weight="regular">
-            Отдел сервиса
-          </Typography>
-        </div>
-        <div className={styles.main__cards}>
-          {employeesVariables.serviceDepartment.map((item, index) => (
-            <EmployeeCard
-              key={index}
-              fullname={item.fullname}
-              image={item.image}
-              jobTitle={item.jobTitle}
-              mail={item.mail}
-              phoneNumber={item.phoneNumber}
-            />
-          ))}
-        </div>
-      </div>
+      </>) }
     </div>
   );
 };

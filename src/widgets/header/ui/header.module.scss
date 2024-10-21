@@ -23,10 +23,17 @@
   &.black__variant {
     background-color: rgba(0, 0, 0, 0.5);
   }
+  &.white__variant{ 
+    .burger__custom{ 
+      & > img {
+        filter: brightness(0.5) contrast(1.2);
+      }
+    }
+  }
   &:hover,
   &.white__variant {
     background-color: var(--color-white);
-
+    
     .li {
       p {
         color: var(--color-black) !important;

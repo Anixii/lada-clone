@@ -1,0 +1,95 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  .main__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 52px;
+  }
+  .main__title,
+  .main__subtitle {
+    text-align: center;
+  }
+  .main__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .main__subtitle {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .recomendation__item {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 25px;
+  }
+  .recomendation__text,.recomendation__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 20px;
+  }
+  .recomendation__list{ 
+    row-gap: 8px;
+  }
+  .list__title{ 
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .recomendation__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .recomendation__swiper{ 
+    display: flex; 
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  .main__head_btns{ 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    column-gap: 16px;
+  }
+  @media screen and (max-width: 1220px) {
+    row-gap: 52px;
+    .main__title,
+    .main__subtitle {
+      text-align: start;
+    }
+    .recomendation__item {
+      padding: 0 10%;
+      grid-template-columns: 1fr;
+    }
+    .recomendation__text,.recomendation__list {
+        align-items: flex-start;
+      }
+  }
+  @media screen and (max-width: 600px) {
+    row-gap: 29px;
+    .main__text {
+      row-gap: 16px;
+    }
+    .main__title {
+      font-size: 29px;
+      line-height: 36px;
+    }
+    .main__subtitle {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    .recomendation__item {
+      padding: 0;
+    }
+    .recomendation__title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .list__title{ 
+        font-size: 16px;
+        line-height: 22px;
+    }
+  }
+}

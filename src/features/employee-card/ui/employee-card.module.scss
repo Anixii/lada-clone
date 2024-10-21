@@ -32,6 +32,9 @@
     object-fit: cover;
     object-position: center;
   }
+  .card__mail__link{
+    color: var(--color-orange-primary);
+  }
   @media screen and (max-width: 1220px) {
 
   }

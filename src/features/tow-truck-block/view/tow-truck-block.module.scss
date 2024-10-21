@@ -1,0 +1,83 @@
+.main{ 
+    padding-left: 20%; 
+    display: flex; 
+    flex-direction: column; 
+    row-gap: 16px;   
+    .main__image{ 
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+    .main__content{ 
+        display: flex; 
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .main__text{ 
+        .main__text__title{ 
+            font-size: 24px;
+            line-height: 28px;
+            width: calc(612px /1091px * 100%);
+        }
+        .main__text__subtitle{ 
+            margin: 32px 0 16px 0;
+            width: calc(804px /1091px * 100%);
+            line-height: 24px;
+            .main__tel__link{ 
+                color: var(--color-orange-primary);
+            }
+        }
+        .main__list{ 
+            width: calc(804px /1091px * 100%);
+        }
+        .main__btn{ 
+            margin-bottom: 28px;
+            padding: 18.5px;
+            border-radius: 40px;
+            width: calc(402px /1091px * 100%);
+            background-color: var(--color-orange-primary);
+        }
+    }
+    @media screen and (max-width: 1220px) {
+        row-gap: 48px;   
+        padding-left: 0;
+        .main__title{ 
+            text-align: center;
+        }
+        .main__text{ 
+            width: calc(459px / 1024px * 100%);
+            .main__text__title, .main__text__subtitle,.main__list,.main__btn{ 
+                width: 100%;
+            }
+            .main__btn{ 
+                display: none;
+            }
+        }
+        .main__image{ 
+            width: calc(468px / 1024px * 100%);
+        }
+        .main__content{ 
+            flex-direction: row-reverse;
+            column-gap: 33px;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+    }
+    @media screen and (max-width: 600px) {
+        row-gap: 32px;  
+        .main__content{ 
+            flex-direction: column;
+        }
+        .main__image{
+            width: 100%;
+        } 
+        .main__text{ 
+            width: 100%;
+            .main__btn{ 
+                display: block;
+            }
+        }
+    }
+}

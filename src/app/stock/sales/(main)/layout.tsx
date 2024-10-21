@@ -37,7 +37,7 @@ export default function SalesLayout({
         {currentLink === 1 && children}
         {currentLink === 2 && newSales}
         {currentLink === 3 && expiring}
-        <NewCarsLada />
+        <NewCarsLada isFull={true}/>
       </div>
     </>
   );

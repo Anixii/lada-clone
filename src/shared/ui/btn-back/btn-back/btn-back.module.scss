@@ -1,0 +1,13 @@
+.main__wrapper {
+  width: 100%;
+  position: relative;
+  .main {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    position: absolute;
+    z-index: 99;
+    color: var(--color-black-circled);
+  }
+}

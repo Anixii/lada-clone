@@ -15,6 +15,7 @@ export const PATHS: IPathTypes = {
   TRADEIN: '/customers/tradein',
   CORPORATESALES: '/customers/corporatesales',
   TEST_DRIVE: '/customers/test-drive',
+  ACCESSORIES: '/customers/accessories',
   NEWS: '/news',
   EMPLOYEE: '/company/employee',
   VACANCY: '/company/vacancy',
@@ -76,4 +77,5 @@ export const PagesBreadcrumb = [
   { path: 'tow-truck', title: 'Эвакуатор' },
   { path: 'stock', title: 'Акции' },
   { path: 'sales', title: 'Акции отдела продаж' },
+  { path: 'accessories', title: 'Аксессуары и запасные части' },
 ];

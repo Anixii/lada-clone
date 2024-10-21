@@ -31,11 +31,9 @@ const DefineNews = ({ date, description, image, title }: IDefineNewsProps) => {
         ))}
       </div>
       <div>
-        <div className={styles.main__date}>
-          <Typography variant="text" weight="bold">
-            {date}
-          </Typography>
-        </div>
+        <Typography className={styles.main__date} variant="text" weight="bold">
+          {date}
+        </Typography>
         <div className={styles.main__descriptions}>
           <Typography htmlContent={description} variant="text" weight="regular">
             {description}

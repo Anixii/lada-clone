@@ -2,12 +2,16 @@ import styles from './new-cars-lada.module.scss';
 import { newCarsCardItems } from '../variables/variables';
 import { NewCarLadaCard } from '@/entities/new-car-lada-card';
 import { Typography } from '@/shared/ui/typography';
+import classNames from 'classnames';
 
 
-const NewCarsLada = () => {
+interface INewCarsLada {
+  isFull?: boolean
+}
+const NewCarsLada = ({ isFull = false }:INewCarsLada) => {
   return (
     <section className={`container ${styles.main__wrapper}`}>
-      <div className={styles.main}>
+      <div className={classNames(styles.main, isFull && styles.full)}>
         <div className={styles.main__text}>
           <div className={styles.main__title}>
             <Typography variant="h3" weight="regular" color="black">

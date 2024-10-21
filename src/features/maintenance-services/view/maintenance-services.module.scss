@@ -1,0 +1,125 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  .main__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .services__swiper{
+    display: none;
+  }
+  .services__title {
+    position: relative;
+    z-index: 3;
+    font-size: 24px;
+    line-height: 28px;
+    min-height: 66px;
+  }
+  .main__services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  .services__item {
+    overflow: hidden;
+    position: relative;
+    padding: 30px 30px 42px 30px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 15px 0px #00000033;
+    min-height: 246px;
+  }
+  .services__circle {
+    width: 179px;
+    height: 179px;
+    position: absolute;
+    z-index: 1;
+    right: -10%;
+    bottom: -6%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+  }
+  .services__image {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+  .services__title {
+    min-height: 62px;
+  }
+  .services__subtitle {
+    position: relative;
+    z-index: 3;
+    margin: 24px 0 32px 0;
+    .services__price {
+      color: var(--color-orange-primary);
+    }
+  }
+  .services__link__title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    column-gap: 8px;
+  }
+  @media screen and (max-width: 1220px) {
+    row-gap: 52px;
+    .main__services {
+      padding: 0 12%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .services__subtitle {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .main__services {
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .main__services {
+      display: none;
+    }
+    .services__item{ 
+        margin-bottom: 50px;
+        height: 100%;
+        min-height: 270px;
+        box-shadow: none;
+    }
+    .services__image {
+        width: 134px;
+        height: 134px;
+        object-fit: contain;
+        object-position: center;
+      }
+    .main__title {
+      display: none;
+    }
+    .services__swiper{ 
+        display: block; 
+       
+        & div[class~=swiper-pagination] {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            & span[class~=swiper-pagination-bullet] { 
+                width: 12px;
+                height: 12px;
+                background-color:#C3C3C3;
+            }
+            & span[class~=swiper-pagination-bullet-active] { 
+                width: 20px;
+                height: 20px;
+                background-color: var(--color-orange-primary);
+            }
+        }
+    }
+  }
+}

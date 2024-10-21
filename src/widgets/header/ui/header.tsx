@@ -16,7 +16,7 @@ import { MouseEvent, ReactNode, useState } from 'react';
 import classNames from 'classnames';
 
 
-interface IHeaderPropsType {
+export interface IHeaderPropsType {
   variant?: 'black__variant' | 'transparent__variant' | 'white__variant';
 }
 interface ISubtitleElement {
@@ -44,7 +44,7 @@ const hoverElements: IListEl = {
       { title: 'Трейд-ин', url: PATHS.TRADEIN },
       { title: 'Тест-драйв', url: PATHS.TEST_DRIVE },
       { title: 'Выкуп авто', url: PATHS.BUYOUT },
-      { title: 'Аксессуары и запасные части' },
+      { title: 'Аксессуары и запасные части', url: PATHS.ACCESSORIES },
       { title: 'Корпоративные продажи', url: PATHS.CORPORATESALES },
     ],
   },
@@ -377,6 +377,7 @@ const Header = ({ variant = 'black__variant' }: IHeaderPropsType) => {
           </div>
           {isTablet && (
             <BurgerMenu
+              customClass={styles.burger__custom}
               to="top"
               open_icon={burger_icon}
               close_icon={close_icon}

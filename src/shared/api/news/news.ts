@@ -8,12 +8,13 @@ export const newsApi = {
   async getAllNews(params?: INewsParamsType) {
     const news = await fetcher('/news/all/', {
       queryParams: { ...params, page_size: this.page_size },
-      customSettings: { cache: 'no-cache' },
+      customSettings: { next: { revalidate: 2400 } },
     });
     return news;
   },
   async getNewsDetails(id: string) {
-    const data: INewsDetailsResultType = await fetcher(`/news/detail/${id}/`);
+    const data: INewsDetailsResultType = await fetcher(`/news/detail/${id}/`,
+      { customSettings: { next: { revalidate: 2400 } } });
     if (!('error' in data)) {
       return data;
     }

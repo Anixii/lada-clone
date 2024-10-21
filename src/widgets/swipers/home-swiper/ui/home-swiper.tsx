@@ -1,44 +1,51 @@
 'use client';
 import styles from './home-swiper.module.scss';
 import Typography from '@/shared/ui/typography/ui/typography';
-import bg1 from '@/shared/assets/images/bg1.png';
-import bg2 from '@/shared/assets/images/bg2.png';
-import bg3 from '@/shared/assets/images/bg3.png';
 import { AppSwiper } from '@/shared/ui/swiper';
 import useMediaQuery from '@/shared/lib/hooks/useMediaQuery';
 import AppButton from '@/shared/ui/button/ui/button';
 import { adaptiveHandler } from '@/shared/lib/helpers/helpers';
+import { IMainBannersWithTextType } from '@/shared/api/content/types/type';
 import { SwiperOptions } from 'swiper/types';
-import { StaticImageData } from 'next/image';
 import { SwiperRef } from 'swiper/react';
 import { useRef } from 'react';
 
 
 interface ISlide {
+  id:number;
   title: string;
-  subtitle?: string;
-  image: StaticImageData;
+  text?: string;
+  image: string;
+  image__path: string;
 }
 
 const slides: ISlide[] = [
   {
+    id: 1,
     title: 'Выгода от 10%',
-    subtitle: 'На запчасти и услуги сервиса для автомобилей от 2,5 лет',
-    image: bg1,
+    text: 'На запчасти и услуги сервиса для автомобилей от 2,5 лет',
+    image: '../../../../shared/assets/images/bg1.png',
+    image__path: '../../../../shared/assets/images/bg1.png',
   },
   {
+    id: 1,
     title: '4 этап Российской серии кольцевых гонок',
-    subtitle: '',
-    image: bg2,
+    text: '',
+    image: '../../../../shared/assets/images/bg2.png',
+    image__path: '../../../../shared/assets/images/bg2.png',
   },
   {
+    id: 1,
     title: 'LADA NIVA KHL',
-    subtitle: 'Соревнование – с самим собой',
-    image: bg3,
+    text: 'Соревнование – с самим собой',
+    image: '../../../../shared/assets/images/bg3.png',
+    image__path: '../../../../shared/assets/images/bg3.png',
   },
 ];
-
-const HomeSwiper = () => {
+interface IHomeSwiperProps {
+  banners?: Array<IMainBannersWithTextType>
+}
+const HomeSwiper = ({ banners = slides }:IHomeSwiperProps) => {
   const swiper = useRef<SwiperRef>(null);
   const isTablet = useMediaQuery('(max-width: 1200px)');
   const isMobile = useMediaQuery('(max-width: 640px)');
@@ -71,10 +78,10 @@ const HomeSwiper = () => {
   return (
     <div className={styles.main}>
       <AppSwiper options={swiperOptions} swiperRef={swiper}>
-        {slides.map((el) => (
+        {banners.map((el) => (
           <div
             key={el.title}
-            style={{ backgroundImage: `url(${el.image.src})` }}
+            style={{ backgroundImage: `url(${el.image})` }}
             className={styles.slide}
           >
             <div className={`container ${styles.slideInner}`}>
@@ -86,12 +93,12 @@ const HomeSwiper = () => {
                 >
                   {el.title}
                 </Typography>
-                {el.subtitle && (
+                {el.text && (
                   <Typography variant={adaptiveHandler('h4', 'subtitleSecond', 'textSmall', isMobile, isTablet)}
                     weight="regular"
                     color="white"
                   >
-                    {el.subtitle}
+                    {el.text}
                   </Typography>
                 )}
               </div>

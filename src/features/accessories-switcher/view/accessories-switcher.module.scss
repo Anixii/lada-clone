@@ -1,0 +1,115 @@
+.main {
+  .main__title {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  }
+  .main__swithcers {
+    margin: 60px 0 80px;
+    display: flex;
+    gap: 24px;
+  }
+  .switcher__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: calc(374px / 1408px * 100%);
+    color: var(--color-gray-four);
+  }
+  .switcher__block {
+    background-color: var(--color-gray-four);
+    border-radius: 24px;
+    width: 100%;
+    height: 13px;
+  }
+  .switcher__item.switcher__item_active {
+    color: var(--color-orange-primary);
+    .switcher__block {
+      background-color: var(--color-orange-primary);
+    }
+  }
+  .main__content {
+    width: calc(1232px / 1406px * 100%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+    row-gap: 38px;
+  }
+  .content__item{ 
+    display: flex;
+    column-gap: 16px;
+  }
+  .content__information{ 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .content__subtitle{ 
+    margin: 16px 0 24px ;
+    line-height: 24px;
+  }
+  .content__btn{ 
+    padding: 14.5px;
+    color: var(--color-orange-primary);
+    border: 1px solid var(--color-orange-primary);
+    border-radius: 30px;
+    background-color: white;
+    width: calc(241px / 446px *100% );
+}
+  @media screen and (max-width: 1220px) {
+    .main__swithcers {
+      margin: 72px 0 80px;
+    }
+    .main__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .switcher__item {
+      width: calc(374px / 960px * 100%);
+    }
+    .main__content {
+      gap: 26px;
+      width: 100%;
+    }
+    .content__btn{ 
+        width: calc(241px / 381px *100% );
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .main__swithcers {
+      margin: 37px 0 62px;
+    }
+    .main__title {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .main__swithcers {
+      gap: 18px;
+    }
+    .switcher__item {
+      width: 100%;
+      .switcher__block {
+        height: 8px;
+      }
+      .switcher__title {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+    .main__content{ 
+        grid-template-columns: 1fr;
+        gap: 48px;
+        .content__item{ 
+            column-gap: 8px;
+        }
+        .content__image{ 
+            width: 48px;
+            height: 48px;
+        }
+    }
+    .content__btn{ 
+        width: 100%;
+    }
+  }
+}

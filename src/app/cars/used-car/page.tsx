@@ -1,17 +1,19 @@
 import ModelSlider from '@/features/model-swiper/view/model-swiper';
 import TickerBlock from '@/features/ticker-block/ticker-block';
+import { contetnsUsedCarApi } from '@/shared/api/content/used-car/used-car';
 import { items } from '@/shared/lib/variables/ticker-block-items';
 import { CarList } from '@/widgets/car-list';
 import { Header } from '@/widgets/header';
-import { HomeSwiper } from '@/widgets/swipers';
+import { BannerSwiper } from '@/widgets/swipers/banner-swiper';
 import React from 'react';
 
 
-const CarAvailable = () => {
+const UsedCar = async() => {
+  const banners = await contetnsUsedCarApi.getUsedCarBanner();
   return (
     <>
       <Header />
-      <HomeSwiper />
+      <BannerSwiper images={banners}/>
       <TickerBlock items={items} />
       <ModelSlider />
       <CarList />
@@ -19,4 +21,4 @@ const CarAvailable = () => {
   );
 };
 
-export default CarAvailable;
+export default UsedCar;

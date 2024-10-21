@@ -11,10 +11,11 @@ import { Typography } from '@/shared/ui/typography';
 import { Advantages } from '@/widgets/advantages';
 import { AnotherServicesBlock } from '@/widgets/another-services-block';
 import { BuybackRequestBlock } from '@/widgets/buyback-request-block';
-import { CustomersBanner } from '@/widgets/customers-banner';
 import { NewCarsLada } from '@/widgets/new-cars-lada';
 import { StepFlow } from '@/widgets/step-flow/index';
 import { Header } from '@/widgets/header';
+import { tradeInApi } from '@/shared/api/content/trade-in/trade-in';
+import { BannerSwiper } from '@/widgets/swipers/banner-swiper';
 import { Metadata } from 'next';
 
 
@@ -22,12 +23,13 @@ export const metadata: Metadata = {
   title: 'LADA | Трейд-ин',
   description: 'Lada official site',
 };
-const TradeInPage = () => {
+const TradeInPage = async() => {
+  const banners = await tradeInApi.getTradeInBanners();
   return (
     <>
       <Header />
       <Breadcrumbs top="100px" containerClasses="container" color="light" />
-      <CustomersBanner />
+      <BannerSwiper images={banners}/>
       <div className={`${styles.main__title} container`}>
         <Typography variant="h2" weight="regular">
           Обмен и выкуп автомобилей с пробегом

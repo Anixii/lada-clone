@@ -11,10 +11,11 @@ interface IBurgerMenu {
   children: ReactNode;
   open_icon: StaticImageData;
   close_icon: StaticImageData;
+  customClass?: string
 }
 
 const BurgerMenu: FC<IBurgerMenu> = (props) => {
-  const { to, children, open_icon, close_icon } = props;
+  const { to, children, open_icon, close_icon, customClass } = props;
 
   const [ isOpen, setIsOpen ] = useState<boolean>(false);
 
@@ -39,7 +40,7 @@ const BurgerMenu: FC<IBurgerMenu> = (props) => {
 
   return (
     <div>
-      <div className={styles.icon} onClick={isOpen ? handleClose : handleOpen}>
+      <div className={`${styles.icon} ${customClass}`} onClick={isOpen ? handleClose : handleOpen}>
         <Image src={isOpen ? close_icon : open_icon} alt='menu toggle' />
       </div>
       <div className={classNames(styles.main, directionClass)}>

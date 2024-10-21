@@ -17,13 +17,14 @@
     max-height: 767px;
   }
   .main__date{   
-    width: auto;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+    // width: auto;
+    // display: flex; 
+    // justify-content: center; 
+    // align-items: center;
     background-color: #F3F4F6;
     border-radius: 10px;
     padding: 8px 40px; 
+    display: inline-block;
     margin-bottom: 24px;
   }
   .main__descriptions{ 

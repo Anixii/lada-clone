@@ -25,7 +25,7 @@ const StockSalesDetails = () => {
           title="Заявка на обратный звонок"
         />
       </div>
-      <NewCarsLada />
+      <NewCarsLada isFull={true}/>
     </>
   );
 };

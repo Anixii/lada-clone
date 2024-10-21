@@ -9,7 +9,7 @@ const nextConfig = {
     BASE_URL: process.env.BASE_URL,
   },
   images: {
-    domains: ['intei.artwaga.com','static.lada.ru'],
+    domains: ['intei.artwaga.com','static.lada.ru', 's3.timeweb.cloud'],
     remotePatterns: [
       {
         protocol: 'https',

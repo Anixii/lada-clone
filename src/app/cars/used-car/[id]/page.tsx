@@ -25,7 +25,7 @@ const CarAvailableDetails = async ({ params }: ICarAvailableDetails) => {
     +params.id,
   );
   const characterostics =
-    await caravailableDetailsApi.getAvaiableCarDetailsMainFeatures(1);
+    await caravailableDetailsApi.getAvaiableCarDetailsMainFeatures(+params.id);
 
   return (
     <>

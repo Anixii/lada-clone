@@ -86,8 +86,8 @@ p {
   hyphens: auto;
 }
 .under_swiper_card_item {
-  min-height: 305px !important; 
-  & img { 
+  min-height: 305px !important;
+  & img {
     height: 188px !important;
     width: 100%;
     object-position: center;
@@ -95,12 +95,12 @@ p {
   }
   @media screen and (max-width: 600px) {
     min-height: 274px !important;
-    & img { 
+    & img {
       height: 123px !important;
     }
   }
-
 }
+
 .container {
   position: relative;
   max-width: 1408px;
@@ -119,5 +119,32 @@ p {
     max-width: 100%;
     padding-left: 24px !important;
     padding-right: 24px !important;
+  }
+}
+.main_paddings {
+  padding: 167px 0;
+}
+.block_paddings{ 
+  padding: 60px 0;
+}
+.center_block{ 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .main_paddings {
+    padding: 110px 0;
+  }
+  .block_paddings{ 
+    padding: 45px 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main_paddings {
+    padding: 87px 0;
+  }
+  .block_paddings{ 
+    padding: 35px 0;
   }
 }

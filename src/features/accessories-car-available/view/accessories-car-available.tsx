@@ -76,16 +76,6 @@ export const categoriesItems: Array<IAccessoriesCategoryItem> = [
     name: 'Текстильные ковры салона Exclusive с цветным шильдом',
     text: '',
   },
-  {
-    image: imageOfItem,
-    id: 1,
-    category: 1,
-    image_path: '',
-    car_available: 1,
-    item: '6523',
-    name: 'Литьевые ковры салона комбинированные',
-    text: '',
-  },
 ];
 const AccessoriesCarAvailable = () => {
   const isTablet = useMediaQuery('(max-width: 1220px)');

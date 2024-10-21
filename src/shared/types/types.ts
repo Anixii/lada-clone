@@ -22,7 +22,8 @@ export interface IPathTypes {
   MAINTENANCE: string;
   SERVICE: string;
   TOW_TRUCK: string;
-  STOCK_SALES:string
+  STOCK_SALES:string;
+  ACCESSORIES:string
 }
 
 export interface IHeaderModelLinks {

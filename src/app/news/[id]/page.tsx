@@ -4,6 +4,7 @@ import { newsApi } from '@/shared/api/news/news';
 import { IAllNewsResult, INewsDetailsResultType } from '@/shared/api/news/type';
 import { Header } from '@/widgets/header';
 import { NewsCardItem } from '@/entities/news-card-item';
+import { BtnBack } from '@/shared/ui/btn-back';
 import React from 'react';
 
 
@@ -18,6 +19,7 @@ const DefineNews = async ({ params }: { params: { id: string } }) => {
   return (
     <>
       <Header variant="white__variant" />
+      <BtnBack top="100px" containerClasses="container"/>
       <DefineNewsBlock
         title={defineNews.name || ''}
         image={defineNews.images}
